@@ -50,7 +50,7 @@ const iconsList = ['fa-diamond', 'fa-diamond',
 	 }
 	 
 // first click
-	 let isFirstClick = false;
+	 let isFirstClick = true;
 	 
 /*
  * click event
@@ -193,7 +193,7 @@ const iconsList = ['fa-diamond', 'fa-diamond',
         		<li><i class="fa fa-star"></i></li>`;
 		//reset the timer		
 	    stopTimer();
-        isFirstClick = True;
+        isFirstClick = true;
         totalSeconds = 0;
         timerContainer.innerHTML = totalSeconds + 's';
   }
