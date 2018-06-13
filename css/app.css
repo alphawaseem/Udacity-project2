@@ -26,6 +26,39 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+
+.modal {
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    top:50%;
+    z-index: 99999;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.modal.hide {
+    top: -999999px;
+}
+
+#play-again {
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    color: white;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    padding: 16px 48px;
+    font-size: 1.2em;
+}
+
+#play-again:hover {
+    box-shadow: 2px 5px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
 h1 {
@@ -37,6 +70,16 @@ h1 {
  * Styles for the deck of cards
  */
 
+ .timer {
+     margin-left: 20px;
+     font-weight: bold;
+ }
+ .timer::before {
+     content : "⏲ ";
+ }
+ .timer::after {
+     content : " secs";
+ }
 .deck {
     width: 660px;
     min-height: 680px;
