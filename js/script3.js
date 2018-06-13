@@ -125,6 +125,9 @@ function click(card) {
   * Compare the 2 cards
   */
 function compare(currentCard, previousCard) {
+
+	addMove();
+
 	//Match
 	if (currentCard.innerHTML === previousCard.innerHTML) {
 		//console.log('match');
@@ -147,7 +150,6 @@ function compare(currentCard, previousCard) {
 		openedCards = [];
 	}
 	//Add new move
-	addMove();
 }
 
 
@@ -192,10 +194,10 @@ function rating() {
 	if (moves >= 20 && moves < 35) {
 		starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
 				<li><i class="fa fa-star"></i></li>`;
-		ratingScore--;
+		ratingScore = 2;
 	} else if (moves >= 35) {
 		starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>`;
-		ratingScore--;
+		ratingScore = 1;
 	}
 }
 
